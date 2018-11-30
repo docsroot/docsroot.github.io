@@ -1,1 +1,37 @@
-<p>On each web application that has authentiation function, we must have this: (1) user makes a sucessfully login&nbsp;then (2) user does some modification on their browser then (3) user does other activities but not submit his/her changes then (4) user comes back after one or two hours and does submit the form then (5) user is being navigated to login page and lost all recent changes.</p><p>So we will have to think of a solution to make the session alive until user closes the browser.</p><p>Below are some solution for this</p><p><b><u>Option 1</u></b>: create an iframe that does auto refresh the page which made an update on session.</p><p>The meta tag with&nbsp;http-equiv="refresh" will help for this purpose.</p><p><b><u>Option 2</u></b>: create an endpoint which just update the session, add some javascript code which automatically calls to that endpoint.</p><p>This require some javascript code but can be used along with some html/css to make the site more friendly and visible. This <a href="https://stackoverflow.com/questions/1431733/keeping-asp-net-session-open-alive" target="_blank">so question</a> has nice aswers.</p><p><b><u><i><br>References</i></u></b><br></p><ol><li>A nice UI of heartbeat is <a href="http://output.jsbin.com/ibagob/1/" target="_blank">here</a></li><li><a href="http://www.primaryobjects.com/2008/01/29/preventing-session-timeouts-in-c-asp-net-web-applications/" target="_blank">Preventing Session Timeouts in Web Applications</a><br></li></ol>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>WebApp - Keep session alive longer</title>
+
+    <meta name="twitter:title" property="og:title" content="WebApp - Keep session alive longer">
+    <meta name="twitter:description" property="og:description">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DocsRoot">
+
+    <meta name="author" content="huanhvhd@gmail.com" />
+    <meta name="creator" content="docsroot" />
+    
+    <style type="text/css">
+        blockquote {
+            border-left: 5px solid green;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+    <body>
+        <!--Heading of the page-->
+        <h1>WebApp - Keep session alive longer</h1>
+        
+        
+
+        <!--The body part: what you put into RTE-->
+        <p>On each web application that has authentiation function, we must have this: (1) user makes a sucessfully login&nbsp;then (2) user does some modification on their browser then (3) user does other activities but not submit his/her changes then (4) user comes back after one or two hours and does submit the form then (5) user is being navigated to login page and lost all recent changes.</p><p>So we will have to think of a solution to make the session alive until user closes the browser.</p><p>Below are some solution for this</p><p><b><u>Option 1</u></b>: create an iframe that does auto refresh the page which made an update on session.</p><blockquote>The meta tag with&nbsp;http-equiv="refresh" will help for this purpose.</blockquote><p><b><u>Option 2</u></b>: create an endpoint which just update the session, add some javascript code which automatically calls to that endpoint.</p><p>This require some javascript code but can be used along with some html/css to make the site more friendly and visible. This <a href="https://stackoverflow.com/questions/1431733/keeping-asp-net-session-open-alive" target="_blank">so question</a> has nice aswers.</p><p><b><u><i><br>References</i></u></b><br></p><ol><li>A nice UI of heartbeat is <a href="http://output.jsbin.com/ibagob/1/" target="_blank">here</a></li><li><a href="http://www.primaryobjects.com/2008/01/29/preventing-session-timeouts-in-c-asp-net-web-applications/" target="_blank">Preventing Session Timeouts in Web Applications</a><br></li></ol>
+        
+        
+    </body>
+</html>

@@ -3,11 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+
     <title>Powershell : send mail experiences with Send-MailMessage</title>
+
+    <meta name="twitter:title" property="og:title" content="Powershell : send mail experiences with Send-MailMessage">
+    <meta name="twitter:description" property="og:description">
+    <meta property="og:url" content="https://docsroot.github.io/Powershell--send-mail-experiences-with-Send-MailMessage.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DocsRoot">
+
     <meta name="author" content="huanhvhd@gmail.com" />
-</head>
-<body>
-        <p>I have done several tasks that require to send email to clients, and each task has difference aspects. After all below is my notes for future reuse.</p><p><b>1/ To list (-To)</b></p><p>This accepts an array only, so it could be ONE email address or an array if multiple recipients will receive the mail.</p><p>If emails is a string line "address1@docsroot.com, other@docsroot.com", we must create an array like : $To = $addresses.Split(",")</p><p><b>2/ Attachments list (-Attachments)</b></p><p>This is an array also, we can build an array contains full path of files.</p><p>If any file that does not exist, it will raise an error.</p><p>To get all files within a folder, instead of looping to get full path, we can simply use:</p><blockquote><p>$attachments = Join-Path $mailDataRoot "*.csv"&nbsp;-Resolve</p></blockquote><p><b>3/ Unicode mail (subject or body)</b></p><p>When reading an Unicode file, we should pass -Encoding value, such as UTF8:</p><blockquote>$mailDataContent = Get-Content $mailDataFile -Encoding UTF8</blockquote><p>Then on Send-MailMessage function, also need to put an Encoding, but the value must be .Net type:</p><blockquote><p>... -Encoding ([System.Text.Encoding]::UTF8)</p></blockquote>
+    <meta name="creator" content="docsroot" />
 
     <style type="text/css">
         blockquote {
@@ -15,6 +21,37 @@
             margin: 10px;
             padding: 10px;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #DDD;
+            text-align: center;
+            height: 22px;
+            line-height: 22px;
+        }
     </style>
+</head>
+<body>
+    <!--Heading of the page-->
+    <h1>Powershell : send mail experiences with Send-MailMessage</h1>
+
+    
+
+    <!--The body part: what you put into RTE-->
+        <p>I have done several tasks that require to send email to clients, and each task has difference aspects. After all below is my notes for future reuse.</p><p><b>1/ To list (-To)</b></p><p>This accepts an array only, so it could be ONE email address or an array if multiple recipients will receive the mail.</p><p>If emails is a string line "address1@docsroot.com, other@docsroot.com", we must create an array like : $To = $addresses.Split(",")</p><p><b>2/ Attachments list (-Attachments)</b></p><p>This is an array also, we can build an array contains full path of files.</p><p>If any file that does not exist, it will raise an error.</p><p>To get all files within a folder, instead of looping to get full path, we can simply use:</p><blockquote><p>$attachments = Join-Path $mailDataRoot "*.csv"&nbsp;-Resolve</p></blockquote><p><b>3/ Unicode mail (subject or body)</b></p><p>When reading an Unicode file, we should pass -Encoding value, such as UTF8:</p><blockquote>$mailDataContent = Get-Content $mailDataFile -Encoding UTF8</blockquote><p>Then on Send-MailMessage function, also need to put an Encoding, but the value must be .Net type:</p><blockquote><p>... -Encoding ([System.Text.Encoding]::UTF8)</p></blockquote>
+
+    
+
+    <footer>
+        Created by <a href="http://docsroot.devcovery.com/Listing/ViewByAuthor?author=1" target="_blank">huanhvhd@gmail.com</a>. Last modified 12/4/2018 8:15:40 AM. View online <a href="https://docsroot.github.io/Powershell--send-mail-experiences-with-Send-MailMessage.html" target="_blank">here</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+    </footer>
 </body>
 </html>

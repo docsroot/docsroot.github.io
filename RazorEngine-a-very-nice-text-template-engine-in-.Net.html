@@ -3,11 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+
     <title>RazorEngine: a very nice text template engine in .Net</title>
+
+    <meta name="twitter:title" property="og:title" content="RazorEngine: a very nice text template engine in .Net">
+    <meta name="twitter:description" property="og:description">
+    <meta property="og:url" content="https://docsroot.github.io/RazorEngine-a-very-nice-text-template-engine-in-.Net.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DocsRoot">
+
     <meta name="author" content="huanhvhd@gmail.com" />
-</head>
-<body>
-    <p>RE is a templating engine based on Microsoft Razor parser, we can use Razor syntax to build our complex and beatiful document with very easy. It allows to start with all default configuration, but there are points that we should cusotmize to satisfy our need.</p><p>1/ Run vs RunCompile</p><p>Once the template (based on templateKey - must be unique value in our application) is already complied, we can just use Run to be faster.</p><p>But RunCompile will do the compile for us incase the template is run the first time. An example is simply as below:</p><blockquote>&nbsp; &nbsp; &nbsp; &nbsp; public string Transform(string template, string templateKey, object model)<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return Engine.Razor.RunCompile(template, templateKey, null, model);<br>&nbsp; &nbsp; &nbsp; &nbsp; }</blockquote><div>2/ Create a custom configuration - if you want the output is raw Html</div><div>By default, RE geneated an encoded HTML output. When you need it to be raw HTML string (to display in an email, or let users to view on browser), it is able to customize. The below is a snippet for the need:</div><div><blockquote>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var config = new TemplateServiceConfiguration<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EncodedStringFactory = new RawStringFactory(),<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Engine.Razor = RazorEngineService.Create(config);</blockquote></div><div><p><b><u><i>References:</i></u></b></p><ol><li><a href="https://github.com/Antaris/RazorEngine" target="_blank">RazorEngine source repo</a></li></ol></div>
+    <meta name="creator" content="docsroot" />
 
     <style type="text/css">
         blockquote {
@@ -15,6 +21,37 @@
             margin: 10px;
             padding: 10px;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #DDD;
+            text-align: center;
+            height: 22px;
+            line-height: 22px;
+        }
     </style>
+</head>
+<body>
+    <!--Heading of the page-->
+    <h1>RazorEngine: a very nice text template engine in .Net</h1>
+
+    
+
+    <!--The body part: what you put into RTE-->
+    <p>RE is a templating engine based on Microsoft Razor parser, we can use Razor syntax to build our complex and beatiful document with very easy. It allows to start with all default configuration, but there are points that we should cusotmize to satisfy our need.</p><p>1/ Run vs RunCompile</p><p>Once the template (based on templateKey - must be unique value in our application) is already complied, we can just use Run to be faster.</p><p>But RunCompile will do the compile for us incase the template is run the first time. An example is simply as below:</p><blockquote>&nbsp; &nbsp; &nbsp; &nbsp; public string Transform(string template, string templateKey, object model)<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return Engine.Razor.RunCompile(template, templateKey, null, model);<br>&nbsp; &nbsp; &nbsp; &nbsp; }</blockquote><div>2/ Create a custom configuration - if you want the output is raw Html</div><div>By default, RE geneated an encoded HTML output. When you need it to be raw HTML string (to display in an email, or let users to view on browser), it is able to customize. The below is a snippet for the need:</div><div><blockquote>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var config = new TemplateServiceConfiguration<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EncodedStringFactory = new RawStringFactory(),<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Engine.Razor = RazorEngineService.Create(config);</blockquote></div><div><p><b><u><i>References:</i></u></b></p><ol><li><a href="https://github.com/Antaris/RazorEngine" target="_blank">RazorEngine source repo</a></li></ol></div>
+
+    
+
+    <footer>
+        Created by <a href="http://docsroot.devcovery.com/Listing/ViewByAuthor?author=1" target="_blank">huanhvhd@gmail.com</a>. Last modified 12/4/2018 8:13:48 AM. View online <a href="https://docsroot.github.io/RazorEngine-a-very-nice-text-template-engine-in-.Net.html" target="_blank">here</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+    </footer>
 </body>
 </html>

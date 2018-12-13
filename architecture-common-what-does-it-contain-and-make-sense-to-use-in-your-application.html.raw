@@ -1,1 +1,1 @@
-<p>In this page, I will describe what common aspects this package provides to your application (most of the apps should need these - and more)</p>
+<p>In this page, I will describe what common aspects this package provides to your application (most of the apps should need these - and more). Source code is available also <a href="https://github.com/vndevpro/architecture-common" target="_blank">there</a> :)</p><ul><li>Base64SafeEncoder: this class will generate a base64 string with result is ready to use in URL (remove +, /, = characters)</li></ul><p><br></p>

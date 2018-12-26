@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Adding notification to your web application</title>
+
+    <meta name="twitter:title" property="og:title" content="Adding notification to your web application">
+    <meta name="twitter:description" property="og:description">
+    <meta property="og:url" content="https://docsroot.github.io/Adding-notification-to-your-web-application.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DocsRoot">
+
+    <meta name="author" content="hu****hd@gmail.com" />
+    <meta name="creator" content="docsroot" />
+
+    <style type="text/css">
+        blockquote {
+            border-left: 5px solid green;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #DDD;
+            text-align: center;
+            height: 22px;
+            line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <!--Heading of the page-->
+    <h1>Adding notification to your web application</h1>
+
+    
+
+    <!--The body part: what you put into RTE-->
+    <p>It's pretty common in web apps that need to have a notification after user's action.</p><p>Below is the option I apply into my asp.net mvc website:&nbsp;toastr</p><p>1/ Download css &amp; js files</p><p>Go to the <a href="https://cdnjs.com/libraries/toastr.js" target="_blank">cdn website</a> and take latest files into Content / Scripts folder (for debugging)</p><p>2/ Adding new bundles (css &amp; javascript)</p><blockquote>bundles.Add(new ScriptBundle("~/bundles/toastr", "//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js")<br>&nbsp; &nbsp; &nbsp; &nbsp; .Include("~/Scripts/toastr.min.js"));<br>&nbsp; &nbsp; bundles.Add(new StyleBundle("~/Content/toastr", "//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css")<br>&nbsp; &nbsp; &nbsp; &nbsp; .Include("~/Scripts/toastr.min.css"));</blockquote><p>3/ Render the bundles into expected view</p><p><br></p><p><b>References:</b></p><ul><li><a href="https://github.com/CodeSeven/toastr" target="_blank">toastr github</a><br></li></ul>
+
+    
+
+    <footer>
+        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 12/26/2018 7:59:28 AM. <a href="https://docsroot.github.io/Adding-notification-to-your-web-application.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+    </footer>
+</body>
+</html>

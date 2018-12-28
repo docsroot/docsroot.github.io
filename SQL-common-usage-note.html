@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>SQL common usage note</title>
+
+    <meta name="twitter:title" property="og:title" content="SQL common usage note">
+    <meta name="twitter:description" property="og:description">
+    <meta property="og:url" content="https://docsroot.github.io/SQL-common-usage-note.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DocsRoot">
+
+    <meta name="author" content="hu****hd@gmail.com" />
+    <meta name="creator" content="docsroot" />
+
+    <style type="text/css">
+        blockquote {
+            border-left: 5px solid green;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #DDD;
+            text-align: center;
+            height: 22px;
+            line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <!--Heading of the page-->
+    <h1>SQL common usage note</h1>
+
+    
+
+    <!--The body part: what you put into RTE-->
+    <p>Below are the list of points I had usaged in most of applications:</p><p>1/ Order on column with nullable value</p><p>If a column has integer value to be used for ordering, null rows are being smaller than 0.</p><p>Below is an example, the table has 3 rows only. When "order by [Order] desc", the result will be:</p><p><img src="data:image/png;base64,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" data-filename="image.png" style="width: 311px;"></p><p>When we want it (null) to appear at the end of list, use a case when / isnull clause like</p><blockquote>order by ISNULL([Order], 1000) desc&nbsp;&nbsp;</blockquote><p><br></p><blockquote>order by<br><span style="white-space:pre">		</span>case when [Order] IS NULL then 10000<br><span style="white-space:pre">		</span>else [Order]&nbsp;<br>end</blockquote><p><br></p><p><b>References:</b></p><ul><li><a href="https://docs.microsoft.com/en-us/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql?view=sql-server-2017" target="_blank">int, bigint, smallint, and tinyint </a><br></li></ul><p><br></p>
+
+    
+
+    <footer>
+        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 12/28/2018 7:33:31 AM. <a href="https://docsroot.github.io/SQL-common-usage-note.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+    </footer>
+</body>
+</html>

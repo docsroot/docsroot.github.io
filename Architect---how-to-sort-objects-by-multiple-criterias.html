@@ -46,12 +46,12 @@
     
 
     <!--The body part: what you put into RTE-->
-    <p>In my application, I want to sort a list of objects by multiple aspects like the creation time / update time; number of views on it (how pupular it is); quality of content on it...</p><p>Below are options I <i>think</i> of for the sorting.</p>
+    <p>In my application, I want to sort a list of objects by multiple aspects like the creation time / update time; number of views on it (how pupular it is); quality of content on it...</p><p>Below are options I <i>think</i> of for the sorting.</p><p>1/ Join multiple tables</p><p>If there are two or more tables, the sort can be done by joining tables for the query then order by one ore several fields</p><p>Disadvantage of this is the query becomes more complex for less value (just ordering) and performance could be impact</p><p>2/ Creating dedicated field / table for ordering</p><p>Maybe a new table contains of some fields like ObjectId (Type + Id), Order could be an option. But we need a background task to calculate and update the field.</p><p>Then the query can just join with one table to take the Order value</p><p><br></p><p><br></p>
 
     
 
     <footer>
-        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 1/3/2019 11:36:18 AM. <a href="https://docsroot.github.io/Architect---how-to-sort-objects-by-multiple-criterias.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 1/4/2019 3:58:16 AM. <a href="https://docsroot.github.io/Architect---how-to-sort-objects-by-multiple-criterias.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
     </footer>
 </body>
 </html>

@@ -46,12 +46,12 @@
     
 
     <!--The body part: what you put into RTE-->
-    <p>Following this task we will create a custom role named ReadAndExecute1 and assign it to a sql account, a windows account and a windows group.</p><p>The database will have one table, two stored procedures.</p><p>Script to create database with sprocs:</p><p><br></p>
+    <p>Following this task we will create a custom role named ReadAndExecute1 and assign it to a sql account, a windows account and a windows group.</p><p>The database will have one table, two stored procedures.</p><p>1/ Script to create database with sprocs:</p><blockquote>create database RoleTest1<br>go<br>use RoleTest1<br>go<br>create table [Users] (<br><span style="white-space:pre">	</span>Id int identity (1,1) primary key,<br><span style="white-space:pre">	</span>FullName nvarchar(250) not null<br>)<br>go<br>create proc GetAllUsers<br>as<br>begin<br><span style="white-space:pre">	</span>select * from [Users]<br><span style="white-space:pre">	</span>order by FullName<br>end<br>go<br>create proc SearchUsers(<br><span style="white-space:pre">	</span>@fullName nvarchar(250)<br>)<br>as<br>begin<br><span style="white-space:pre">	</span>select * from [Users]<br><span style="white-space:pre">	</span>where FullName like '%' + @fullName + '%'<br><span style="white-space:pre">	</span>order by FullName<br>end<br>go</blockquote><p><br></p><p><br></p>
 
     
 
     <footer>
-        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 1/30/2019 11:12:13 AM. <a href="https://docsroot.github.io/SQL-Server---working-with-a-custom-role.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 1/30/2019 11:17:01 AM. <a href="https://docsroot.github.io/SQL-Server---working-with-a-custom-role.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
     </footer>
 </body>
 </html>

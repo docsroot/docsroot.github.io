@@ -1,0 +1,1 @@
+<p>Following this task we will create a custom role named ReadAndExecute1 and assign it to a sql account, a windows account and a windows group.</p><p>The database will have one table, two stored procedures.</p><p>Script to create database with sprocs:</p><p><br></p>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>RavenDB administrator notes</title>
+
+    <meta name="twitter:title" property="og:title" content="RavenDB administrator notes">
+    <meta name="twitter:description" property="og:description">
+    <meta property="og:url" content="https://docsroot.github.io/RavenDB-administrator-notes.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DocsRoot">
+
+    <meta name="author" content="hu****hd@gmail.com" />
+    <meta name="creator" content="docsroot" />
+
+    <style type="text/css">
+        blockquote {
+            border-left: 5px solid green;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #DDD;
+            text-align: center;
+            height: 22px;
+            line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <!--Heading of the page-->
+    <h1>RavenDB administrator notes</h1>
+
+    
+
+    <!--The body part: what you put into RTE-->
+    <p>* Restoration can't work in parallel (only one restore task)</p><p>* If we stop the server during a restoration, the status will be kept (go to studio to check restore progress before making a restart - if needed)</p><p>* If after restarted, it says another restore is inprogress, we must do: go to system database, delete the restore/status document, and restore/inprogress document</p><p><br></p>
+
+    
+
+    <footer>
+        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 4/8/2019 7:39:28 AM. <a href="https://docsroot.github.io/RavenDB-administrator-notes.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+    </footer>
+</body>
+</html>

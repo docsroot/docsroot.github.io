@@ -1,0 +1,1 @@
+<p>AWS - Elastic IP:</p><p>When an instance does not have static IP, it will be assigned a random IP from the pool on each start.</p><p>We can reserve an IP with very low cost, it will be charged only if the instance mapped to it is off. So the price can be 0.005$ / hour (off).</p>

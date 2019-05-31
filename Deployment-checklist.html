@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Deployment checklist</title>
+
+    <meta name="twitter:title" property="og:title" content="Deployment checklist">
+    <meta name="twitter:description" property="og:description">
+    <meta property="og:url" content="https://docsroot.github.io/Deployment-checklist.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DocsRoot">
+
+    <meta name="author" content="hu****hd@gmail.com" />
+    <meta name="creator" content="docsroot" />
+
+    <style type="text/css">
+        blockquote {
+            border-left: 5px solid green;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #DDD;
+            text-align: center;
+            height: 22px;
+            line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <!--Heading of the page-->
+    <h1>Deployment checklist</h1>
+
+    
+
+    <!--The body part: what you put into RTE-->
+    <p>All steps below are required to be done for each deployment</p><p>1. Take a backup of databases by using DbBackupMaster</p><p>2. Update Trello the information of the new release (version to be installed, date)</p><p>3. Start the installation with Jenkins and check until there is no issue</p><p>4. Test the application to be sure that it works fine</p><p>5. Copy the database backup files into revelent folders in&nbsp;AllApplicationReleases repository</p><p>6. Copy the new releases into&nbsp;AllApplicationReleases</p><p>7. Commit and Push the new files, to make sure that they are available in BitBucket.</p><p><br></p>
+
+    
+
+    <footer>
+        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 5/31/2019 9:30:22 AM. <a href="https://docsroot.github.io/Deployment-checklist.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+    </footer>
+</body>
+</html>

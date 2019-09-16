@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>How to reset Moodle admin pwd</title>
+
+    <meta name="twitter:title" property="og:title" content="How to reset Moodle admin pwd">
+    <meta name="twitter:description" property="og:description">
+    <meta property="og:url" content="https://docsroot.github.io/How-to-reset-Moodle-admin-pwd.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DocsRoot">
+
+    <meta name="author" content="hu****hd@gmail.com" />
+    <meta name="creator" content="docsroot" />
+
+    <style type="text/css">
+        blockquote {
+            border-left: 5px solid green;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #DDD;
+            text-align: center;
+            height: 22px;
+            line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <!--Heading of the page-->
+    <h1>How to reset Moodle admin pwd</h1>
+
+    
+
+    <!--The body part: what you put into RTE-->
+    <p>The case my client met was that they can't access to admin account anymore because previous person left the company, his email is deleted. When other person try to make a reset, Moodle can't sent email.</p><p>So one of the solution is to reset password directly in database by an update sql but we must deal with hashing algorithment.</p><p>Other solution if we can access to config.php file is<br></p><p>* All database information are in config.php file, including server / db name / table prefix</p><p>* Also we can find what is admin account in $cfg -&gt; admin variable</p><p>* Perform a query to search for that account. If having it, we can update the password field to value of another working account.</p><p>* If not, we can update the email, with a check on other column emailstop must be 0</p><p>* Perform a reset password on UI, search by username if avoid the case of multiple accounts map to single email</p><p>* Check the mailbox and follow instructions sent by Moodle.</p>
+
+    
+
+    <footer>
+        By <a href="http://docsroot.devcovery.com/Listing/ViewBy?author=1" target="_blank">hu****hd@gmail.com</a> at 9/16/2019 4:44:24 PM. <a href="https://docsroot.github.io/How-to-reset-Moodle-admin-pwd.html" target="_blank">View online</a>. Built with &hearts; by <a href="http://docsroot.devcovery.com" target="_blank">docsroot</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<p>1. Use single RUN for several commands</p><p>That will help to reduce number of layers on the image (each RUN will introduce a layer) and also the size of output image</p>

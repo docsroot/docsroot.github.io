@@ -1,0 +1,1 @@
+<p>Some commands that are helpful</p><p>* Get all drives</p><pre>wmic logicaldisk get deviceid, volumename, description</pre><p><br></p><p><br></p>
